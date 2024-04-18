@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <div id="container">
+    <header class="navbar">
+      <h1>Charles Martins</h1>
+      <nav id="sessoes">
+        <button onclick="ativarMenu()" id="hamburguer"><i id="icon_hamburguer" class="fa-solid fa-bars"></i></button>
+        <ul class="nav-list">
+          <li><a class="ativo" href="#sobre">Sobre mim</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a id="ancora_contatos" href="#contatos">Contatos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="sobre">
+      <div id="apresentacao">
+        <span>Olá, eu sou</span>
+        <h1>Charles Martins</h1>
+        <h2>Desenvolvedor Full Stack <i id="icone_codigo" class="fa-solid fa-code"></i></h2>
+      </div>
+      <img src="assets/Foto de Perfil.jpeg" alt="Foto de Perfil">
+      <div id="texto">
+        <span>Estou cursando Ciência da Computação no intuito de conseguir uma excelente carreira no meio da
+          programação
+          atuando tanto no Front-End quanto no Back-End. Gosto muito de aprender novas tecnoligias e colocar em prática,
+          sempre que encontro um desafio no
+          aprendizado dou o meu melhor para superá-lo. Quero tornar realidade o meu sonho de trabalhar com o que eu
+          gosto. </span>
+      </div>
+    </section>
+    <section id="habilidades">
+      <div class="container_tech" id="front-end">
+        <h2>Front-End</h2>
+        <div class="grid_tech">
+          <div class="tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+              class="imagem_tech" />
+            <span class="legenda_tech">JavaScript</span>
+          </div>
+          <div class="tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+              class="imagem_tech" />
+            <span class="legenda_tech">CSS</span>
+          </div>
+          <div class="tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+              class="imagem_tech" />
+            <span class="legenda_tech">HTML</span>
+          </div>
+          <div class="tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+              class="imagem_tech" />
+            <span class="legenda_tech">React</span>
+          </div>
+        </div>
+      </div>
+      <div class="container_tech" id="back-end">
+        <h2>Back-End</h2>
+        <div class="grid_tech">
+          <div class="tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+              class="imagem_tech" />
+            <span class="legenda_tech">NodeJS</span>
+          </div>
+          <div class="tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+              class="imagem_tech" />
+            <span class="legenda_tech">MongoDB</span>
+          </div>
+          <div class="tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+              class="imagem_tech" />
+            <span class="legenda_tech">MySQL</span>
+          </div>
+          <div class="tech">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+              class="imagem_tech" />
+            <span class="legenda_tech">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projetos">
+      <div class="container_projetos">
+        <div class="projeto">
+          <h1 class="nome_projeto">MoviesLib</h1>
+          <img class="imagem_projeto" src="./assets/Projeto_MoviesLib.png">
+          <div class="tech_projeto">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+              class="imagem_tech" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+              class="imagem_tech" />
+          </div>
+          <span class="descricao_projeto">Projeto que busca todos os filmes cadastrados no <a class="link"
+              href="https://www.themoviedb.org/?language=pt-BR" target="_blank">TMDB</a> e mostra
+            informações sobre o filme. A busca pelos filmes e suas informações ocorre com a utilização da <a
+              class="link" href="https://developer.themoviedb.org/docs/getting-started" target="_blank">API</a> do
+            própio
+            TMDB.</span>
+          <div class="container_btn">
+            <button class="btn_deploy"><a href="https://charlesshow.github.io/movieslib/" title="Deploy"
+                target="_blank"><i class="fa-solid fa-eye"></i></a></button>
+            <button class="btn_codigo"><a href="https://github.com/CharlesShow/movieslib" title="Código"
+                target="_blank"><i class="fa-brands fa-github"></i></a></button>
+          </div>
+        </div>
+        <div class="projeto">
+          <h1 class="nome_projeto">Clima</h1>
+          <img class="imagem_projeto" src="./assets/Projeto_Clima.png">
+          <div class="tech_projeto">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+              class="imagem_tech" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+              class="imagem_tech" />
+          </div>
+          <span class="descricao_projeto">Projeto que mostra o clima de qualquer cidade do mundo utilizando a API do <a
+              class="link" href="https://openweathermap.org/" target="_blank">OpenWeather</a>.</span>
+          <div class="container_btn">
+            <button class="btn_deploy"><a href="https://clima-kappa-six.vercel.app" title="Deploy" target="_blank"><i
+                  class="fa-solid fa-eye"></i></a></button>
+            <button class="btn_codigo"><a href="https://github.com/CharlesShow/clima" title="Código" target="_blank"><i
+                  class="fa-brands fa-github"></i></a></button>
+          </div>
+        </div>
+        <div class="projeto">
+          <h1 class="nome_projeto">Jogo da Memória</h1>
+          <img class="imagem_projeto" src="./assets/Projeto_Jogo_da_Memoria.png">
+          <div class="tech_projeto">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+              class="imagem_tech" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+              class="imagem_tech" />
+          </div>
+          <span class="descricao_projeto">Projeto que imita um jogo da memória no navegador.</span>
+          <div class="container_btn">
+            <button class="btn_deploy"><a href="https://charlesshow.github.io/jogo_da_memoria/" title="Deploy"
+                target="_blank"><i class="fa-solid fa-eye"></i></a></button>
+            <button class="btn_codigo"><a href="https://github.com/CharlesShow/jogo_da_memoria" title="Código"
+                target="_blank"><i class="fa-brands fa-github"></i></a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contatos">
+      <div class="container_contatos">
+        <div class="descricao_contato">
+          <i class="fa-regular fa-envelope"></i>
+          <span>charlesciqueiramartins@gmail.com</span>
+        </div>
+        <div class="descricao_contato">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>(31) 987360272</span>
+        </div>
+        <div class="area_icon_contato">
+          <div class="icon_contato">
+            <a href="https://www.linkedin.com/in/charles-martins-305b7b291/" title="Linkedin" target="_blank"><i
+                class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <div class="icon_contato">
+            <a href="https://github.com/CharlesShow" target="_blank" title="GitHub"><i
+                class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
