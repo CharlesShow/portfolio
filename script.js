@@ -4,7 +4,7 @@ const sections = document.querySelectorAll("section");
 const hamburguer = document.querySelector("#hamburguer");
 const iconHamburguer = document.querySelector("#icon_hamburguer");
 const sessoes = document.querySelector("#sessoes");
-const ancoraContatos = document.querySelector("#ancora_contatos");
+const navbar = document.querySelector(".navbar");
 
 const iconBarras = "fa-solid fa-bars";
 const iconX = "fa-solid fa-x";
@@ -19,30 +19,20 @@ function ativarMenu() {
   }
 }
 
-container.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
   sections.forEach((sec) => {
-    let top = container.scrollTop;
+    let top = window.scrollY;
     let offset = sec.offsetTop - 100;
     let height = sec.offsetHeight;
     let id = sec.getAttribute("id");
 
     if (top >= offset && top < offset + height) {
-      if (
-        window.innerWidth <= 500 &&
-        top + container.clientHeight >= container.scrollHeight
-      ) {
-        navLinks.forEach((links) => {
-          links.classList.remove("ativo");
-        });
-        ancoraContatos.classList.add("ativo");
-      } else {
-        navLinks.forEach((links) => {
-          links.classList.remove("ativo");
-          document
-            .querySelector(".nav-list a[href*=" + id + "]")
-            .classList.add("ativo");
-        });
-      }
+      navLinks.forEach((links) => {
+        links.classList.remove("ativo");
+        document
+          .querySelector(".nav-list a[href*=" + id + "]")
+          .classList.add("ativo");
+      });
     }
   });
 });
@@ -50,9 +40,10 @@ container.addEventListener("scroll", () => {
 navLinks.forEach((ancora) => {
   ancora.addEventListener("click", function (e) {
     e.preventDefault();
-    sessoes.classList.remove("ativo");
-    iconHamburguer.classList = iconBarras;
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
+    ativarMenu();
+    const section = document.querySelector(this.getAttribute("href"));
+    window.scroll({
+      top: section.offsetTop - navbar.offsetHeight,
       behavior: "smooth",
     });
   });

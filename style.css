@@ -142,6 +142,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.800);
   padding: 0;
 }
 
@@ -149,7 +150,7 @@ button {
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.780);
+  background-color: rgb(70, 70, 70);
   border: 3px solid black;
 }
 
@@ -180,10 +181,7 @@ button {
   #container {
     display: grid;
     gap: 50px;
-    scroll-snap-type: y;
-    overflow-y: scroll;
     margin-top: 70px;
-    height: calc(100vh - 70px);
   }
 
   .navbar {
@@ -385,11 +383,8 @@ button {
 @media (max-width: 500px) {
   #container {
     display: grid;
-    gap: 10px;
-    scroll-snap-type: y;
-    overflow-y: scroll;
+    gap: 25px;
     margin-top: 50px;
-    height: calc(100vh - 50px);
   }
 
   .navbar {
@@ -543,7 +538,8 @@ button {
   }
 
   #contatos {
-    padding: 15px 10px;
+    padding: 0px 10px;
+    height: calc(100vh - 50px);
   }
 
   #contatos .container_contatos {
